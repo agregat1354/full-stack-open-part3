@@ -1,0 +1,28 @@
+// getAll
+GET http://localhost:3001/api/persons
+
+###
+
+// getInfo
+GET http://localhost:3001/info
+
+###
+
+// getSingle
+GET http://localhost:3001/api/persons/6
+
+###
+
+// deletePerson
+DELETE http://localhost:3001/api/persons/3
+
+###
+
+// addNewPerson
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Adam Testowy",
+    "number": "123-321-123"
+}
