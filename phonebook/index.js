@@ -1,6 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 const app = express()
+app.use(cors())
 app.use(express.json())
 morgan.token('body', function (req, res) { return JSON.stringify(req.body) })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
@@ -52,6 +54,7 @@ app.delete('/api/persons/:id', (request, response) => {
     const id = Number(request.params.id)
     persons = persons.filter(person => person.id !== id)
 
+    console.log(persons)
 
     response.status(204).end()
 })
@@ -75,7 +78,8 @@ app.post('/api/persons', (request, response) => {
 
 
     persons = [...persons, newPerson]
-    response.json(body)
+    console.log(persons)
+    response.json(newPerson)
 })
 
 const PORT = 3001
