@@ -14,7 +14,7 @@ GET http://localhost:3001/api/persons/64be1441aa82447373e6bcfd
 ###
 
 // deletePerson
-DELETE http://localhost:3001/api/persons/64be12f00d159632ca72e4d3
+DELETE http://localhost:3001/api/persons/64be1441aa82447373e6bcfd
 
 ###
 
@@ -23,17 +23,17 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Jan Test",
-    "number": "111-222-333"
+    "name": "Marek Testowy",
+    "number": "111-21362"
 }
 
 ###
 
 // updatePerson
-PUT http://localhost:3001/api/persons/64be12f00d159632ca72e4d3
+PUT http://localhost:3001/api/persons/64be142faa82447373e6bcf9
 Content-Type: application/json
 
 {
-    "name": "Adam Update-Test",
+    "name": "j",
     "number": "111-222-333"
 }
