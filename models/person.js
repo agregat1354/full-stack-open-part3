@@ -8,7 +8,7 @@ const url = process.env.MONGODB_URI
 console.log("connecting to mongodb")
 
 mongoose.connect(url)
-    .then(result => {
+    .then(() => {
         console.log('connected to MongoDB')
     })
     .catch((error) => {
@@ -25,7 +25,7 @@ const personSchema = new mongoose.Schema({
         validate: (v) => {
             return /^\d{2,3}-\d+$/.test(v) && v.length >= 9
         },
-        message: (props) => "Phone number must follow following pattern: 2-3 digits followed by hyphen and more digits, there also must be at least 8 numbers"
+        message: () => "Phone number must follow following pattern: 2-3 digits followed by hyphen and more digits, there also must be at least 8 numbers"
     }
 })
 
